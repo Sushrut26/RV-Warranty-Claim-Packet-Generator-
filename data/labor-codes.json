@@ -1,32 +1,158 @@
 [
   {
-    "code": "EXAMPLE-100",
-    "description": "Slide-out room adjustment and seal inspection",
+    "code": "SUB-SW6DE",
+    "description": "Water heater — Suburban SW6DE 6-gal (gas/electric): diagnose & replace",
+    "hours": 1.6,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "SUB-SW10DE",
+    "description": "Water heater — Suburban SW10DE 10-gal (gas/electric): diagnose & replace",
+    "hours": 1.8,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "SUB-SW12DE",
+    "description": "Water heater — Suburban SW12DE 12-gal (gas/electric): diagnose & replace",
+    "hours": 1.9,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "SUB-521273",
+    "description": "Water heater gas valve (Suburban 521273) — test & replace",
+    "hours": 0.9,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "SUB-SF30F",
+    "description": "Furnace — Suburban SF-30F 30k BTU: diagnose & replace",
+    "hours": 2.2,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "SUB-NT30SP",
+    "description": "Furnace — Suburban NT-30SP 30k BTU: diagnose & replace",
+    "hours": 2.2,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "SUB-232286",
+    "description": "Furnace igniter/flame-sense electrode (Suburban 232286) — replace",
+    "hours": 0.6,
+    "manufacturer": "Suburban"
+  },
+  {
+    "code": "DOM-B59516",
+    "description": "Rooftop A/C — Dometic Brisk II 15k BTU (B59516): diagnose & replace",
+    "hours": 1.8,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "DOM-PENGUIN2",
+    "description": "Rooftop A/C — Dometic Penguin II low-profile: diagnose & replace",
+    "hours": 2.0,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "DOM-CCC2-TSTAT",
+    "description": "A/C thermostat/control (Dometic CCC2) — diagnose & replace",
+    "hours": 0.8,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "DOM-ABSORB-COOLING",
+    "description": "Refrigerator cooling unit (Dometic absorption RM/DM series) — replace",
+    "hours": 3.5,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "DOM-FRIDGE-CTRL",
+    "description": "Refrigerator control/eyebrow board (Dometic RM/DM series) — replace",
+    "hours": 1.0,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "DOM-9100-AWNING",
+    "description": "Power awning motor/gearbox (Dometic 9100) — diagnose & replace",
+    "hours": 1.5,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "DOM-320-TOILET",
+    "description": "Gravity-flush toilet (Dometic 300/320 series) — replace & seal",
+    "hours": 0.9,
+    "manufacturer": "Dometic"
+  },
+  {
+    "code": "LCI-236575",
+    "description": "Slide-out — Lippert Schwintek in-wall IG-42 motor (236575): replace & sync",
+    "hours": 2.0,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-SCHWINTEK-CTRL",
+    "description": "Slide-out Schwintek controller — diagnose, replace & re-time",
+    "hours": 1.5,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-THRUFRAME-MOTOR",
+    "description": "Slide-out through-frame/rack-&-pinion motor — diagnose & replace",
+    "hours": 2.2,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-373566",
+    "description": "Power awning motor — Lippert Solera (373566): diagnose & replace",
+    "hours": 1.4,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-GC3-LEVELING",
+    "description": "Leveling — Lippert Ground Control 3.0 jack/motor: diagnose & replace",
+    "hours": 1.8,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-LEVELUP-CTRL",
+    "description": "Leveling controller/touchpad (Lippert Level-Up / One Control) — replace",
+    "hours": 1.2,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-SOLIDSTEP",
+    "description": "Entry steps — Lippert SolidStep / StepAbove: diagnose & replace",
+    "hours": 1.0,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "LCI-AXLE-BRAKE",
+    "description": "Electric brake assembly (Lippert axle) — diagnose & replace, per wheel",
+    "hours": 1.3,
+    "manufacturer": "Lippert"
+  },
+  {
+    "code": "GEN-ROOF-RESEAL",
+    "description": "Roof membrane reseal at penetration/seam (per section)",
+    "hours": 1.0,
+    "manufacturer": "Any"
+  },
+  {
+    "code": "GEN-SLIDE-SEAL",
+    "description": "Slide-out wiper/bulb seal — replace, per slide",
     "hours": 1.5,
     "manufacturer": "Any"
   },
   {
-    "code": "EXAMPLE-200",
-    "description": "Roof membrane reseal (per section)",
-    "hours": 2.0,
-    "manufacturer": "Any"
-  },
-  {
-    "code": "EXAMPLE-300",
-    "description": "Water heater diagnosis and replacement",
-    "hours": 1.8,
-    "manufacturer": "Any"
-  },
-  {
-    "code": "EXAMPLE-400",
-    "description": "12V converter/charger replacement",
+    "code": "GEN-WATER-LEAK",
+    "description": "Plumbing/fitting water-leak diagnosis & repair (PEX)",
     "hours": 1.2,
     "manufacturer": "Any"
   },
   {
-    "code": "EXAMPLE-500",
-    "description": "Entry step motor replacement",
-    "hours": 0.8,
+    "code": "GEN-CONVERTER",
+    "description": "12V power converter/charger — diagnose & replace",
+    "hours": 1.1,
     "manufacturer": "Any"
   }
 ]

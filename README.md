@@ -64,9 +64,22 @@ vercel deploy
 
 ## `data/labor-codes.json` — adding real labor codes
 
-The searchable labor dropdown is seeded from `data/labor-codes.json`. It ships
-with a few **placeholder** `EXAMPLE-###` entries. Replace them with real codes
-from your manufacturer's flat-rate chart.
+The searchable labor dropdown is seeded from `data/labor-codes.json`.
+
+**About the seed data:** the entries reference **real, common RV components and
+part numbers** (e.g. Suburban `SW10DE` water heaters, the Lippert Schwintek
+`236575` slide motor, the Dometic Brisk II `B59516` A/C, Lippert Solera `373566`
+awning motor). The `hours` are **realistic industry-typical estimates**, not any
+single manufacturer's official allowance.
+
+> ⚠️ **Important — the official numbers are portal-only.** Coachbuilders (Thor,
+> Forest River, Jayco, Grand Design, etc.) publish their flat-rate **codes** and
+> **approved labor hours** only inside their dealer/service warranty portals;
+> they are not public. Inside the portal, labor time auto-populates from the
+> repair code you select. Before you submit a claim, replace the `code` and
+> `hours` here with your portal's official values (the `code` field is what
+> prints on the PDF). The seed data is a fast, real-world starting point — not a
+> substitute for your manufacturer's chart.
 
 Each entry looks like this:
 
