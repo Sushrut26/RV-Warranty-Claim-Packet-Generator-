@@ -1,0 +1,32 @@
+[
+  {
+    "code": "EXAMPLE-100",
+    "description": "Slide-out room adjustment and seal inspection",
+    "hours": 1.5,
+    "manufacturer": "Any"
+  },
+  {
+    "code": "EXAMPLE-200",
+    "description": "Roof membrane reseal (per section)",
+    "hours": 2.0,
+    "manufacturer": "Any"
+  },
+  {
+    "code": "EXAMPLE-300",
+    "description": "Water heater diagnosis and replacement",
+    "hours": 1.8,
+    "manufacturer": "Any"
+  },
+  {
+    "code": "EXAMPLE-400",
+    "description": "12V converter/charger replacement",
+    "hours": 1.2,
+    "manufacturer": "Any"
+  },
+  {
+    "code": "EXAMPLE-500",
+    "description": "Entry step motor replacement",
+    "hours": 0.8,
+    "manufacturer": "Any"
+  }
+]

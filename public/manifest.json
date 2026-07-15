@@ -1,0 +1,18 @@
+{
+  "name": "RV Warranty Claim Packet Generator",
+  "short_name": "RV Claim Packet",
+  "description": "Generate a submit-ready RV warranty claim PDF, entirely in your browser.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#1e3a5f",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
