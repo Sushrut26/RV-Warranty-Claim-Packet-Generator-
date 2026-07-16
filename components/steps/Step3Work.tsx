@@ -21,8 +21,8 @@ export function Step3Work({
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-xl font-bold text-slate-900">What did you do?</h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <h2 className="text-xl font-bold text-ink">What did you do?</h2>
+        <p className="mt-1 text-sm text-muted">
           Add the labor operations, any parts, and a description of the work.
         </p>
       </div>
@@ -99,11 +99,11 @@ function LaborSection({
   return (
     <section>
       <div className="mb-2 flex items-center justify-between">
-        <h3 className="text-sm font-bold uppercase tracking-wide text-brand">
+        <h3 className="text-sm font-bold uppercase tracking-wide text-brand-text">
           Labor operations
         </h3>
         {claim.labor.length > 0 && (
-          <span className="text-sm text-slate-500">
+          <span className="text-sm text-muted">
             {totalHours.toFixed(2)} hrs total
           </span>
         )}
@@ -115,13 +115,13 @@ function LaborSection({
           {claim.labor.map((line, i) => (
             <li
               key={i}
-              className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3"
+              className="flex items-center gap-3 rounded-lg border border-line bg-surface p-3"
             >
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-slate-800">
+                <p className="truncate text-sm font-medium text-ink">
                   {line.description}
                 </p>
-                <p className="text-xs text-slate-500">
+                <p className="text-xs text-muted">
                   {line.custom ? "Custom" : line.code} · {line.hours.toFixed(2)}{" "}
                   hrs
                 </p>
@@ -129,7 +129,7 @@ function LaborSection({
               <button
                 type="button"
                 onClick={() => removeLine(i)}
-                className="rounded-md p-2 text-slate-400 hover:bg-slate-100 hover:text-red-600"
+                className="rounded-md p-2 text-muted hover:bg-surface-2 hover:text-bad"
                 aria-label="Remove labor line"
               >
                 ✕
@@ -149,28 +149,28 @@ function LaborSection({
             onChange={(e) => setQuery(e.target.value)}
           />
           {(query || results.length > 0) && (
-            <ul className="mt-2 divide-y divide-slate-100 overflow-hidden rounded-lg border border-slate-200 bg-white">
+            <ul className="mt-2 divide-y divide-line overflow-hidden rounded-lg border border-line bg-surface">
               {results.map((c) => (
                 <li key={c.code}>
                   <button
                     type="button"
                     onClick={() => addFromCode(c)}
-                    className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left hover:bg-slate-50"
+                    className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left hover:bg-surface-2"
                   >
                     <span className="min-w-0">
-                      <span className="block truncate text-sm font-medium text-slate-800">
+                      <span className="block truncate text-sm font-medium text-ink">
                         {c.description}
                       </span>
-                      <span className="text-xs text-slate-500">{c.code}</span>
+                      <span className="text-xs text-muted">{c.code}</span>
                     </span>
-                    <span className="shrink-0 text-sm font-semibold text-slate-600">
+                    <span className="shrink-0 text-sm font-semibold text-ink-2">
                       {c.hours.toFixed(1)}h
                     </span>
                   </button>
                 </li>
               ))}
               {results.length === 0 && (
-                <li className="px-4 py-3 text-sm text-slate-500">
+                <li className="px-4 py-3 text-sm text-muted">
                   No matching codes. Use a custom entry below.
                 </li>
               )}
@@ -179,7 +179,7 @@ function LaborSection({
           <button
             type="button"
             onClick={() => setShowCustom(true)}
-            className="mt-2 text-sm font-semibold text-accent hover:text-accent-dark"
+            className="mt-2 text-sm font-semibold text-accent hover:text-accent-strong"
           >
             + Add custom labor operation
           </button>
@@ -188,7 +188,7 @@ function LaborSection({
 
       {/* Custom entry */}
       {showCustom && (
-        <div className="rounded-lg border border-accent/40 bg-accent/5 p-4">
+        <div className="rounded-lg border border-accent bg-accent-tint p-4">
           <label className="field-label">Custom operation description</label>
           <input
             className="field-input"
@@ -201,7 +201,7 @@ function LaborSection({
             <div className="w-32">
               <label className="field-label">Hours</label>
               <input
-                className="field-input"
+                className="field-input field-mono"
                 inputMode="decimal"
                 placeholder="1.5"
                 value={customHours}
@@ -257,9 +257,9 @@ function PartsSection({
   return (
     <section>
       <div className="mb-2 flex items-center justify-between">
-        <h3 className="text-sm font-bold uppercase tracking-wide text-brand">
+        <h3 className="text-sm font-bold uppercase tracking-wide text-brand-text">
           Parts used{" "}
-          <span className="font-normal normal-case text-slate-400">
+          <span className="font-normal normal-case text-muted">
             (optional)
           </span>
         </h3>
@@ -270,7 +270,7 @@ function PartsSection({
           {claim.parts.map((p) => (
             <div
               key={p.id}
-              className="rounded-lg border border-slate-200 bg-white p-3"
+              className="rounded-lg border border-line bg-surface p-3"
             >
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-12">
                 <div className="col-span-2 sm:col-span-5">
@@ -285,7 +285,7 @@ function PartsSection({
                 <div className="col-span-2 sm:col-span-3">
                   <label className="field-label">Part #</label>
                   <input
-                    className="field-input"
+                    className="field-input field-mono"
                     placeholder="GC6AA-10"
                     value={p.partNumber}
                     onChange={(e) =>
@@ -296,7 +296,7 @@ function PartsSection({
                 <div className="sm:col-span-2">
                   <label className="field-label">Qty</label>
                   <input
-                    className="field-input"
+                    className="field-input field-mono"
                     inputMode="numeric"
                     value={p.qty}
                     onChange={(e) =>
@@ -309,7 +309,7 @@ function PartsSection({
                 <div className="sm:col-span-2">
                   <label className="field-label">Unit $</label>
                   <input
-                    className="field-input"
+                    className="field-input field-mono"
                     inputMode="decimal"
                     value={p.unitCost}
                     onChange={(e) =>
@@ -321,13 +321,13 @@ function PartsSection({
                 </div>
               </div>
               <div className="mt-2 flex items-center justify-between">
-                <span className="text-xs text-slate-500">
+                <span className="text-xs text-muted">
                   Line total: ${(p.qty * p.unitCost).toFixed(2)}
                 </span>
                 <button
                   type="button"
                   onClick={() => removeRow(p.id)}
-                  className="text-sm font-medium text-slate-400 hover:text-red-600"
+                  className="text-sm font-medium text-muted hover:text-bad"
                 >
                   Remove
                 </button>
@@ -340,7 +340,7 @@ function PartsSection({
       <button
         type="button"
         onClick={addRow}
-        className="mt-3 text-sm font-semibold text-accent hover:text-accent-dark"
+        className="mt-3 text-sm font-semibold text-accent hover:text-accent-strong"
       >
         + Add a part
       </button>

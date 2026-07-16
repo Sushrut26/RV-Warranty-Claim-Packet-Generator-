@@ -15,8 +15,8 @@ export function Step2Unit({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-slate-900">Unit &amp; customer</h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <h2 className="text-xl font-bold text-ink">Unit &amp; customer</h2>
+        <p className="mt-1 text-sm text-muted">
           Details of the RV being serviced and who owns it.
         </p>
       </div>
@@ -41,7 +41,7 @@ export function Step2Unit({
           </label>
           <input
             id="year"
-            className="field-input"
+            className="field-input field-mono"
             inputMode="numeric"
             placeholder="2024"
             value={claim.year}
@@ -98,11 +98,11 @@ export function Step2Unit({
         </div>
       </div>
 
-      <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-        <h3 className="text-sm font-bold text-slate-700">
+      <div className="rounded-lg border border-line bg-surface-2 p-4">
+        <h3 className="text-sm font-bold text-ink-2">
           Who is this claim from?
         </h3>
-        <p className="mb-4 mt-0.5 text-xs text-slate-500">
+        <p className="mb-4 mt-0.5 text-xs text-muted">
           Your shop&apos;s info. We&apos;ll remember this on this device for next
           time — it never leaves your browser.
         </p>
@@ -138,7 +138,7 @@ export function Step2Unit({
             <input
               id="phone"
               type="tel"
-              className="field-input"
+              className="field-input field-mono"
               inputMode="tel"
               placeholder="(555) 123-4567"
               value={claim.filer.phone}

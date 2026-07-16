@@ -48,8 +48,8 @@ export function Step4Evidence({
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-xl font-bold text-slate-900">Evidence</h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <h2 className="text-xl font-bold text-ink">Evidence</h2>
+        <p className="mt-1 text-sm text-muted">
           Add photos of the failure and repair. They&apos;re processed on your
           device and embedded straight into the PDF — never uploaded anywhere.
         </p>
@@ -69,33 +69,33 @@ export function Step4Evidence({
         type="button"
         onClick={() => inputRef.current?.click()}
         disabled={busy}
-        className="flex w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-slate-300 bg-white px-6 py-10 text-center transition hover:border-brand hover:bg-slate-50 disabled:opacity-60"
+        className="flex w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-line-strong bg-surface px-6 py-10 text-center transition hover:border-brand hover:bg-surface-2 disabled:opacity-60"
       >
         <span className="text-3xl">📷</span>
-        <span className="font-semibold text-slate-700">
+        <span className="font-semibold text-ink-2">
           {busy ? "Processing…" : "Tap to add photos"}
         </span>
-        <span className="text-xs text-slate-500">
+        <span className="text-xs text-muted">
           Take a photo or choose from your library
         </span>
       </button>
 
       {error && (
-        <p className="rounded-lg bg-red-50 px-4 py-2 text-sm text-red-700">
+        <p className="rounded-lg bg-bad-tint px-4 py-2 text-sm text-bad">
           {error}
         </p>
       )}
 
       {claim.photos.length > 0 && (
         <div>
-          <p className="mb-2 text-sm font-medium text-slate-600">
+          <p className="mb-2 text-sm font-medium text-ink-2">
             {claim.photos.length} photo{claim.photos.length > 1 ? "s" : ""} attached
           </p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {claim.photos.map((photo) => (
               <div
                 key={photo.id}
-                className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white"
+                className="group relative overflow-hidden rounded-lg border border-line bg-surface"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -106,12 +106,12 @@ export function Step4Evidence({
                 <button
                   type="button"
                   onClick={() => removePhoto(photo.id)}
-                  className="absolute right-1.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-black/60 text-sm text-white opacity-100 transition hover:bg-red-600 sm:opacity-0 sm:group-hover:opacity-100"
+                  className="absolute right-1.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-black/60 text-sm text-white opacity-100 transition hover:bg-bad sm:opacity-0 sm:group-hover:opacity-100"
                   aria-label={`Remove ${photo.name}`}
                 >
                   ✕
                 </button>
-                <p className="truncate px-2 py-1 text-[11px] text-slate-500">
+                <p className="truncate px-2 py-1 text-[11px] text-muted">
                   {photo.name}
                 </p>
               </div>

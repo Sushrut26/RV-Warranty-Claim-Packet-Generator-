@@ -66,7 +66,7 @@ export function ClaimWizard() {
     <div>
       <Stepper current={step} onJump={goTo} />
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+      <div className="card p-5 sm:p-7">
         {step === 0 && <Step1Manufacturer claim={claim} patch={patch} />}
         {step === 1 && <Step2Unit claim={claim} patch={patch} />}
         {step === 2 && <Step3Work claim={claim} patch={patch} />}
@@ -74,14 +74,16 @@ export function ClaimWizard() {
         {step === 4 && <Step5Review claim={claim} />}
 
         {genError && (
-          <p className="mt-4 rounded-lg bg-red-50 px-4 py-2 text-sm text-red-700">
+          <p className="mt-4 rounded-md border border-bad bg-bad-tint px-4 py-2 text-sm text-bad">
             {genError}
           </p>
         )}
 
         {done && step === LAST_STEP && (
-          <div className="mt-4 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-800">
-            <p className="font-semibold">Your claim PDF has downloaded. ✓</p>
+          <div className="mt-4 rounded-md border border-good bg-good-tint px-4 py-3 text-sm text-good">
+            <p className="font-display font-bold uppercase tracking-wide">
+              Claim PDF downloaded ✓
+            </p>
             <p className="mt-0.5">
               Check your downloads folder. Refresh the page to start a fresh
               claim — nothing is saved except your shop info on this device.
@@ -123,7 +125,7 @@ export function ClaimWizard() {
       </div>
 
       {step === 0 && !canAdvance && (
-        <p className="mt-3 text-center text-sm text-slate-400">
+        <p className="mt-3 text-center text-sm text-muted">
           Select a manufacturer or supplier to continue.
         </p>
       )}

@@ -17,10 +17,10 @@ export function Step1Manufacturer({
   return (
     <div className="space-y-5">
       <div>
-        <h2 className="text-xl font-bold text-slate-900">
+        <h2 className="text-xl font-bold text-ink">
           Who are you filing with?
         </h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-muted">
           Pick the manufacturer or component supplier this claim goes to.
         </p>
       </div>
