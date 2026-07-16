@@ -1,9 +1,13 @@
 // Minimal offline-first service worker. The whole app runs client-side, so once
 // the shell is cached the tool keeps working with no signal — handy standing next
 // to an RV in a storage lot.
+//
+// Paths are derived from the worker's own location so this works whether the app
+// is served from "/" (Vercel/local) or a repo subpath (GitHub Pages).
 
-const CACHE = "rv-claim-v1";
-const APP_SHELL = ["/", "/manifest.json", "/icon.svg"];
+const CACHE = "rv-claim-v2";
+const BASE = new URL("./", self.location).pathname; // "/" or "/RV-.../"
+const APP_SHELL = [BASE, BASE + "manifest.json", BASE + "icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -36,7 +40,9 @@ self.addEventListener("fetch", (event) => {
           caches.open(CACHE).then((cache) => cache.put(request, copy));
           return res;
         })
-        .catch(() => caches.match(request).then((r) => r || caches.match("/")))
+        .catch(() =>
+          caches.match(request).then((r) => r || caches.match(BASE))
+        )
     );
     return;
   }

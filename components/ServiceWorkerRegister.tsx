@@ -12,8 +12,9 @@ export function ServiceWorkerRegister() {
     ) {
       return;
     }
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
     const register = () =>
-      navigator.serviceWorker.register("/sw.js").catch(() => {
+      navigator.serviceWorker.register(`${basePath}/sw.js`).catch(() => {
         // Offline support is a nice-to-have; ignore registration failures.
       });
     window.addEventListener("load", register);

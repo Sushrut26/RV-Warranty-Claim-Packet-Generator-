@@ -2,12 +2,14 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata: Metadata = {
   title: "RV Warranty Claim Packet Generator",
   description:
     "Generate a professional, print-ready RV warranty claim PDF in minutes. " +
     "Free, no account, and nothing ever leaves your browser.",
-  manifest: "/manifest.json",
+  manifest: `${basePath}/manifest.json`,
   appleWebApp: {
     capable: true,
     title: "RV Claim Packet",
